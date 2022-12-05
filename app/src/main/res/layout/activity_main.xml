@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/drawer"
+    tools:context=".MainActivity">
+
+
+    <FrameLayout
+        android:id="@+id/flContent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white_bg"
+        android:orientation="vertical"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingStart="@dimen/normal_margin"
+            android:paddingEnd="@dimen/normal_margin"
+            >
+
+            <ImageView
+                android:id="@+id/open_menu"
+                android:layout_width="28dp"
+                android:layout_height="40dp"
+                android:src="@drawable/vector_menu" />
+
+            <EditText
+                android:id="@+id/search_input"
+                android:layout_width="0dp"
+                android:layout_height="38dp"
+                android:layout_marginStart="@dimen/normal_margin"
+                android:layout_weight="1"
+                android:background="@drawable/bg_white_radius_15"
+                android:cursorVisible="false"
+                android:paddingStart="@dimen/normal_margin"
+                android:paddingEnd="@dimen/normal_margin"
+                android:textColor="@color/black"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/keys"
+            android:layout_marginTop="60dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end|bottom"
+            app:srcCompat="@drawable/vector_add"
+            android:layout_marginBottom="18dp"
+            android:layout_marginEnd="18dp"
+            app:backgroundTint="@color/white"
+             />
+    </FrameLayout>
+
+    <fragment
+        android:id="@+id/id_left_menu"
+        android:name="com.example.auth.ui.LeftMenuFragment"
+        android:layout_width="200dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:tag="LEFT"
+        android:clickable="true"
+        android:focusable="true" />
+
+</androidx.drawerlayout.widget.DrawerLayout>

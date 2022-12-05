@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">GoAuth</string>
+    <string name="export">导出</string>
+    <string name="modify">修改</string>
+    <string name="delete">删除</string>
+    <string name="add_account">添加账号</string>
+    <string name="account">账号</string>
+    <string name="secret">密钥</string>
+    <string name="add">添加</string>
+    <string name="scan_qr">扫描二维码</string>
+    <string name="please_input_account">请输入账号</string>
+    <string name="please_input_secret">请输入密码</string>
+    <string name="download_and_scan">在您的新设备上下载本应用，然后扫描下方的二维码</string>
+
+</resources>
