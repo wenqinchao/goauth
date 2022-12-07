@@ -38,6 +38,7 @@ class BarcodeScannerActivity : BaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_barcode_scanner)
+        setToolBar(R.string.scan_qr)
         previewView = findViewById(R.id.activity_main_previewView)
         cameraProviderFuture = ProcessCameraProvider.getInstance(this)
         requestCamera()
@@ -163,6 +164,8 @@ class BarcodeScannerActivity : BaseActivity() {
                 Data.dao!!.insertAll(secretInfo)
             }
         }
-        toActivity(this, MainActivity::class.java)
+        val bundle = Bundle()
+        bundle.putBoolean("refresh", true)
+        toActivity(this, MainActivity::class.java, bundle)
     }
 }

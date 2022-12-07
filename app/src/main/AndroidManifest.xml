@@ -17,7 +17,8 @@
         tools:targetApi="31">
         <activity
             android:name=".ui.BarcodeScannerActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:parentActivityName=".ui.AddSecretActivity"/>
         <activity
             android:name=".ui.ExportActivity"
             android:exported="false"
@@ -28,7 +29,8 @@
             android:parentActivityName=".MainActivity" />
         <activity
             android:name=".MainActivity"
-            android:exported="true">
+            android:exported="true"
+            android:theme="@style/ThemeWithoutAnim">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

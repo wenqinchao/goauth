@@ -9,7 +9,7 @@
     <string name="add">添加</string>
     <string name="scan_qr">扫描二维码</string>
     <string name="please_input_account">请输入账号</string>
-    <string name="please_input_secret">请输入密码</string>
+    <string name="please_input_secret">请输入密钥</string>
     <string name="download_and_scan">在您的新设备上下载本应用，然后扫描下方的二维码</string>
 
 </resources>

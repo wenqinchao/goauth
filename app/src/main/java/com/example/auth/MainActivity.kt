@@ -6,6 +6,7 @@ import android.content.Context
 import android.os.Bundle
 import android.util.Log
 import android.view.Gravity
+import android.view.KeyEvent
 import android.widget.EditText
 import android.widget.ImageView
 import android.widget.TextView
@@ -96,5 +97,10 @@ class MainActivity : BaseActivity() {
         }
     }
 
-
+    override fun onKeyDown(keyCode: Int, event: KeyEvent?): Boolean {
+        if(keyCode == KeyEvent.KEYCODE_BACK && event?.repeatCount == 0){
+            return false
+        }
+        return super.onKeyDown(keyCode, event)
+    }
 }

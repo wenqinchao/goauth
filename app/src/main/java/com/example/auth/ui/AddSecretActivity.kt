@@ -33,10 +33,12 @@ class AddSecretActivity : BaseActivity() {
             val accountEdit = findViewById<EditText>(R.id.account)
             if (accountEdit.text.toString().isEmpty()) {
                 Toast.makeText(this, R.string.please_input_account, Toast.LENGTH_SHORT).show()
+                return@setOnClickListener
             }
             val secretEdit = findViewById<EditText>(R.id.secret)
             if (secretEdit.text.toString().isEmpty()) {
                 Toast.makeText(this, R.string.please_input_secret, Toast.LENGTH_SHORT).show()
+                return@setOnClickListener
             }
             val secretInfo =
                 SecretInfo(null, secretEdit.text.toString(), accountEdit.text.toString())

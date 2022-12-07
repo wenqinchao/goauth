@@ -2,6 +2,7 @@ package com.example.auth.adaptor
 
 import android.animation.ValueAnimator
 import android.annotation.SuppressLint
+import android.app.ActivityOptions
 import android.content.ClipData
 import android.content.ClipboardManager
 import android.content.Context
@@ -72,6 +73,7 @@ class SecretInfoAdaptor(private val dataSet: List<SecretInfo>) :
                     Data.secrets.removeAt(position)
                     val intent = Intent(view.context,MainActivity::class.java)
                     view.context.startActivity(intent)
+
                 }
                 if (it.itemId == R.id.modify_item) {
                     description.isEnabled = true
